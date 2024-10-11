@@ -27,11 +27,14 @@ h2 {
   position: fixed;
   top: 0;
   margin: 0;
+  transition: 0.5s;
+  
 }
 
 .header-nav-bar-scrol {
-  border-bottom: 1px solid #c0c0c0;
-  background-color: rgb(212, 212, 212);
+  /* border-bottom: 1px solid #534545; */
+  background-color: rgba(212, 212, 212, 1);
+
 }
 
 .container {
@@ -125,6 +128,8 @@ h2 {
   font-size: 3.5rem;
   text-align: center;
 }
+
+
 
 .header-text {
   color: bisque;
