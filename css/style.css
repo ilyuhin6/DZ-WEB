@@ -203,7 +203,31 @@ h2 {
 }
 
 .text-fetures {
-  text-align: justify;
-  max-width: 350px;
-  color: gray;
+  width: 310px;
+}
+
+.form-enter {
+  margin: 0 auto;
+  width: 1550px;
+  padding: 25px 0;
+  color: #fff;
+  background-color: #000;
+  margin-top: 40px;
+}
+
+.form-enter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+
+.input-enter-data {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-enter-data input {
+  padding: 5px 10px;
 }
