@@ -13,15 +13,20 @@ body {
 ul,
 li,
 p,
-a {
+a,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
 
 .header-nav-bar {
-  background-color: red;
-  height: 100%;
   width: 100%;
+  margin-top: 10px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  margin: 0;
 }
 
 .container {
@@ -96,3 +101,76 @@ a {
 }
 
 /* end nav-bar */
+
+.main-header {
+  margin: 20px auto;
+  width: 95rem;
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 10rem 0;
+}
+
+.header-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: bisque;
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.header-text {
+  color: bisque;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.main-header a {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.main-btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  color: bisque;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15px;
+  padding: 17px 40px;
+  margin-top: 50px;
+}
+
+/* end main-header */
+
+.popular-product {
+  padding: 45px 0;
+}
+
+.product-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product-tex {
+  font-size: 1rem;
+  width: 700px;
+  margin: 2.3rem auto;
+  color: gray;
+}
+
+.product-card-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
