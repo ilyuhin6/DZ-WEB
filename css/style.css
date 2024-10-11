@@ -149,7 +149,7 @@ h2 {
 
 /* end main-header */
 
-.popular-product {
+.trending-product {
   padding: 45px 0;
 }
 
@@ -173,4 +173,17 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 70px 0;
+}
+
+.product-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.product-text {
+  text-align: center;
+  max-width: 270px;
+  margin-top: 25px;
 }
