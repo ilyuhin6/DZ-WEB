@@ -19,6 +19,9 @@ h2 {
   margin: 0;
   padding: 0;
 }
+.footer {
+  padding: 45px 0;
+}
 
 .header-nav-bar {
   width: 100%;
@@ -28,13 +31,11 @@ h2 {
   top: 0;
   margin: 0;
   transition: 0.5s;
-  
 }
 
 .header-nav-bar-scrol {
   /* border-bottom: 1px solid #534545; */
   background-color: rgba(212, 212, 212, 1);
-
 }
 
 .container {
@@ -128,8 +129,6 @@ h2 {
   font-size: 3.5rem;
   text-align: center;
 }
-
-
 
 .header-text {
   color: bisque;
@@ -231,18 +230,42 @@ h2 {
   justify-content: space-between;
   font-size: 15px;
   font-weight: 600;
+}
 
-  .input-enter-data {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
+.input-enter-data {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-  .input-enter-data input {
-    padding: 5px 10px;
-  }
+.input-enter-data input {
+  padding: 5px 10px;
+}
 
-  .form-btn {
-    padding: 5px 25px;
-  }
+.form-btn {
+  padding: 5px 25px;
+}
 
+.footer-main-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-link {
+  list-style: none;
+  tex
+  t-decoration: none;
+}
+
+
+.title-footer {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: gray;
+}
