@@ -12,8 +12,7 @@ window.addEventListener('scroll', () => {
 
 
 
-
-
+// START Modal
 const modalController = ({ modal, btnOpen, btnClose, time = 300 }) => {
   // Находим все элементы с указанным селектором btnOpen
   const buttonElems = document.querySelectorAll(btnOpen);
@@ -77,3 +76,86 @@ modalController({
   btnOpen: '.section__button1',
   btnClose: '.modal__close',
 });
+// END Modal
+
+
+
+
+// Start calc
+const display = document.querySelector('.calc-display input');
+const numbers = document.querySelectorAll('.calc-keyboard-num__nums');
+const operators = document.querySelectorAll('.calc-keyboard-operation__operator');
+// Получаем кнопку CE
+const ceButton = document.querySelector('.calc-keyboard-operation__ce');
+
+
+// Переменные для хранения чисел и оператора
+let num1 = '';
+let num2 = '';
+let operator = '';
+
+// Функция для обновления дисплея
+function updateDisplay(num) {
+  if (num1 && operator) {
+    num2 += num;
+    display.value = num1 + operator + num2;
+  } else {
+    num1 += num;
+    display.value = num1;
+  }
+}
+
+// Функция для выполнения операции
+function calculate() {
+  if (num1 && num2 && operator) {
+    let result;
+    switch (operator) {
+      case '+':
+        result = parseFloat(num1) + parseFloat(num2);
+        break;
+      case '-':
+        result = parseFloat(num1) - parseFloat(num2);
+        break;
+      case '/':
+        result = parseFloat(num1) / parseFloat(num2);
+        break;
+      case '*':
+        result = parseFloat(num1) * parseFloat(num2);
+        break;
+      default:
+        result = 0;
+    }
+    display.value = result;
+    num1 = result.toString();
+    num2 = '';
+    operator = '';
+  }
+}
+
+// События для кнопок с цифрами
+numbers.forEach((number) => {
+  number.addEventListener('click', () => {
+    updateDisplay(number.textContent);
+  });
+});
+
+// События для кнопок с операторами
+operators.forEach((op) => {
+  op.addEventListener('click', () => {
+    if (op.textContent === '=') {
+      calculate();
+    } else if (num1 &&!operator) {
+      operator = op.textContent;
+      display.value = num1 + operator;
+    }
+  });
+});
+
+// Событие для кнопки CE
+ceButton.addEventListener('click', () => {
+    num1 = '';
+    num2 = '';
+    operator = '';
+    display.value = '';
+    display.placeholder = '_'; // Если вы хотите очистить текст-заполнитель
+  });
