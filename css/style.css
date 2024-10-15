@@ -20,12 +20,12 @@ h2 {
   padding: 0;
 }
 .footer {
-  padding: 45px 0;
+  padding: 2.8125rem 0;
 }
 
 .header-nav-bar {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -112,7 +112,7 @@ h2 {
 /* end nav-bar */
 
 .main-header {
-  margin: 20px auto;
+  margin: 1.25rem auto;
   width: 95rem;
   background-image: url(../img/header.jpg);
   background-size: cover;
@@ -135,7 +135,7 @@ h2 {
   font-weight: 900;
   font-size: 2rem;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 
 .main-header a {
@@ -146,20 +146,20 @@ h2 {
 .main-btn {
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 12.5rem;
   color: bisque;
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  margin-top: 15px;
-  padding: 17px 40px;
-  margin-top: 50px;
+  margin-top: 0.9375rem;
+  padding: 1.0625rem 2.5rem;
+  margin-top: 3.125rem;
 }
 
 /* end main-header */
 
 .trending-product {
-  padding: 45px 0;
+  padding: 2.8125rem 0;
 }
 
 .product-title {
@@ -174,7 +174,7 @@ h2 {
 .product-card-text {
   text-align: center;
   font-size: 1rem;
-  width: 280px;
+  width: 17.5rem;
   margin: 2.3rem auto;
   color: gray;
 }
@@ -182,7 +182,7 @@ h2 {
 .product-text {
   text-align: center;
   font-size: 1rem;
-  width: 700px;
+  width: 43.75rem;
   margin: 2.3rem auto;
   color: gray;
 }
@@ -190,7 +190,7 @@ h2 {
 .product-card-wrap {
   display: flex;
   justify-content: space-between;
-  margin: 70px 0;
+  margin: 4.375rem 0;
 }
 
 .product-card {
@@ -203,7 +203,7 @@ h2 {
 /* end section popular and trending-product */
 
 .content-info {
-  padding: 45px 0;
+  padding: 2.8125rem 0;
 }
 
 .content-info-wrap {
@@ -212,38 +212,38 @@ h2 {
 }
 
 .text-fetures {
-  width: 310px;
+  width: 19.375rem;
 }
 
 .form-enter {
   margin: 0 auto;
-  width: 1550px;
-  padding: 25px 0;
+  width: 96.875rem;
+  padding: 1.5625rem 0;
   color: #fff;
   background-color: #000;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .form-enter-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
 }
 
 .input-enter-data {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .input-enter-data input {
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
 }
 
 .form-btn {
-  padding: 5px 25px;
+  padding: 0.3125rem 1.5625rem;
 }
 
 .footer-main-wrap {
@@ -253,19 +253,131 @@ h2 {
 
 .footer-link {
   list-style: none;
-  tex
-  t-decoration: none;
 }
-
 
 .title-footer {
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
 }
 
 .footer-link a {
   text-decoration: none;
   color: gray;
+}
+
+/* @media -- Start */
+
+@media (max-width: 1570px) {
+  .main-header {
+    max-width: 85rem;
+  }
+  .form-enter {
+    max-width: 85rem;
+    padding: 1.5625rem 1.5625rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .main-header {
+    max-width: 75rem;
+  }
+  .form-enter {
+    max-width: 75rem;
+  }
+  .container {
+    max-width: 70rem;
+  }
+  .header-menu {
+    gap: 0.5rem;
+  }
+  .header-menu-link {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1075px) {
+  html {
+    font-size: 13px;
+  }
+  .main-header {
+    max-width: 70rem;
+  }
+  .form-enter {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .container {
+    max-width: 50rem;
+  }
+  .main-header {
+    max-width: 60rem;
+  }
+  .form-enter {
+    max-width: 60rem;
+  }
+  .header-search {
+    display: none;
+  }
+  .header-nav-wrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+  .form-enter-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-header {
+    max-width: 50rem;
+    padding: 3rem 0;
+  }
+  .header-title {
+    margin-top: 1rem;
+  }
+  .header-text {
+    margin-bottom: -1rem;
+  }
+  .form-enter {
+    max-width: 50rem;
+  }
+  .product-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 10px;
+  }
+  .main-header {
+    max-width: 35rem;
+  }
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-text {
+    font-size: 1rem;
+  }
+  .form-enter {
+    max-width: 35rem;
+  }
+  .input-enter-data {
+    display: flex;
+    flex-direction: column;
+  }
 }
