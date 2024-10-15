@@ -12,3 +12,68 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
+const modalController = ({ modal, btnOpen, btnClose, time = 300 }) => {
+  // Находим все элементы с указанным селектором btnOpen
+  const buttonElems = document.querySelectorAll(btnOpen);
+
+  // Находим элемент с указанным селектором modal
+  const modalElem = document.querySelector(modal);
+
+  // Инициализируем модальное окно со стилями по умолчанию (скрытым)
+  modalElem.style.cssText = `
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity ${time}ms ease-in-out;
+  `;
+
+  // Функция для закрытия модального окна
+  const closeModal = event => {
+    const target = event.target;
+
+    // Проверяем, был ли клик на модальном окне или кнопке закрытия, или была нажата клавиша Esc
+    if (
+      target === modalElem ||
+      (btnClose && target.closest(btnClose)) ||
+      event.code === 'Escape'
+    ) {
+      // Начинаем закрывать модальное окно, устанавливая opacity в 0
+      modalElem.style.opacity = 0;
+
+      // После времени перехода полностью скрываем модальное окно
+      setTimeout(() => {
+        modalElem.style.visibility = 'hidden';
+      }, time);
+
+      // Удаляем слушатель keydown, чтобы предотвратить бесконечные циклы
+      window.removeEventListener('keydown', closeModal);
+    }
+  };
+
+  // Функция для открытия модального окна
+  const openModal = () => {
+    // Показываем модальное окно, устанавливая visibility и opacity в 1
+    modalElem.style.visibility = 'visible';
+    modalElem.style.opacity = 1;
+
+    // Добавляем слушатель keydown, чтобы закрыть модальное окно при нажатии клавиши Esc
+    window.addEventListener('keydown', closeModal);
+  };
+
+  // Добавляем слушатель click к каждой кнопке, чтобы открыть модальное окно при клике
+  buttonElems.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  // Добавляем слушатель click к модальному окну, чтобы закрыть его при клике
+  modalElem.addEventListener('click', closeModal);
+};
+
+// Инициализируем контроллер модального окна с указанными селекторами
+modalController({
+  modal: '.modal1',
+  btnOpen: '.section__button1',
+  btnClose: '.modal__close',
+});

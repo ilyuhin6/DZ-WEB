@@ -418,3 +418,101 @@ h2 {
     justify-content: center;
   }
 }
+
+/* modal  Start */
+
+.rotated-button {
+  transform: rotate(90deg);
+  position: fixed;
+  left: -5.125rem;
+  top: 50%;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.section__button {
+  background-color: ;
+  border: 0.125rem solid #000;
+  color: #000;
+  font-weight: 700;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+  outline: 0.125rem solid transparent;
+  outline-offset: 3px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.section__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.section__button:focus-visible {
+  outline-color: yellow;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 30px;
+  overflow-y: auto;
+  display: none;
+}
+
+.modal__main {
+  position: relative;
+  max-width: 43.75rem;
+  background-color: #fff;
+  margin: auto;
+  color: #000;
+  border-radius: 16px;
+  padding: 1.875rem 3.75rem 3.75rem;
+  cursor: default;
+}
+
+.modal__title {
+  font-size: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+.modal__container {
+  font-size: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.modal__btn {
+  background-color: red;
+  color: #fff;
+  font-size: 1.625rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  padding: 0.9375rem 1.875rem;
+}
+
+.modal__close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.15s ease-in-out;
+  border-radius: 3px;
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+/* modal end */
+
+/* Start css calc style */
