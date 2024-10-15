@@ -362,22 +362,59 @@ h2 {
 
 @media (max-width: 680px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
   .main-header {
     max-width: 35rem;
+    background: rgba(41, 45, 51, 0.2);
   }
   .header-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: #000;
   }
   .header-text {
     font-size: 1rem;
+    color: #000;
   }
   .form-enter {
-    max-width: 35rem;
+    max-width: 40rem;
+  }
+  .form-enter-text {
+    max-width: 25rem;
+    text-align: center;
   }
   .input-enter-data {
     display: flex;
     flex-direction: column;
+  }
+  .form-input {
+    width: 200px;
+  }
+  .header-menu-link {
+    margin-right: 0;
+  }
+  .product-card-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  .product-img {
+    width: 250px;
+    height: 250px;
+  }
+  .content-info-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .title-footer {
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  .footer-main-wrap {
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    justify-content: center;
   }
 }
