@@ -420,6 +420,10 @@ h2 {
   .footer-link a {
     text-decoration: underline;
   }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* modal  Start */
@@ -653,4 +657,22 @@ h2 {
   font-size: 1.875rem;
   cursor: pointer;
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5) inset;
+}
+
+/* END CALC */
+
+/* ++++++++++++++++++++++--Admin panel--++++++++++++++++++++ */
+.admin-panel-box {
+  position: relative;
+}
+
+.admin-panel {
+  background-image: url(../img/kat.gif);
+  position: absolute;
+  width: 800px;
+  height: 900px;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
