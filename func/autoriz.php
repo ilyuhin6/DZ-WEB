@@ -42,6 +42,7 @@ background-repeat: no-repeat;">
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .validation {
@@ -51,7 +52,7 @@ background-repeat: no-repeat;">
 
         .true-folse-content {
             display: block;
-            width: 680px;
+            width: 40%;
             margin: 0 auto;
             background-color: white;
             color: black;
