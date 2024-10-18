@@ -215,6 +215,34 @@ h2 {
   width: 19.375rem;
 }
 
+.form-up-enter {
+  background-color: rgba(212, 212, 212, 1);
+  margin: 0 auto;
+  width: 50.875rem;
+  padding: 1.5625rem 0;
+  color: #fff;
+
+  margin-top: 2.5rem;
+}
+
+.form-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.form-up-enter-text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: 900;
+}
+
+.input-enter-up-data input {
+  padding: 0.3125rem 0.625rem;
+}
 .form-enter {
   margin: 0 auto;
   width: 96.875rem;

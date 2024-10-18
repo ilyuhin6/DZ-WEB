@@ -216,22 +216,28 @@
 
                 </div>
             </div>
-            <div class="form-enter">
+
+
+            <!-- form registration -->
+            <div class="form-up-enter">
                 <div class="container">
-                    <div class="form-enter-wrap">
-                        <p class="form-enter-text">
-                            Sign up for free for free updates, balets news and special offers
+                    <div class="form-enter-up-wrap">
+                        <p class="form-up-enter-text">
+                            Sign UP for free for free updates, balets news and special offers
                         </p>
-                        <div class="input-enter-data">
-                            <form action="/func/registr.php" method="post" class="form">
+                        <div class="input-enter-up-data">
+                            <form action="/func/registr.php" method="post" class="form-up">
+                                <input type="text" name="name" placeholder="Имя" class="form-input">
                                 <input type="text" name="mail" placeholder="mail" class="form-input">
                                 <input type="password" name="password" placeholder="Пароль" class="form-input">
-                                <button type="submit" class="btn form-btn">Sign UP</button>
+                                <input type="password" name="password-true" placeholder="Подтвердите Пароль">
+                                <button type="submit" class="btn form-btn btn-up">Sign IN</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- form autorization -->
             <div class="form-enter">
                 <div class="container">
                     <div class="form-enter-wrap">
@@ -242,12 +248,15 @@
                             <form action="/func/autoriz.php" method="post" class="form">
                                 <input type="text" name="mail" placeholder="mail" class="form-input">
                                 <input type="password" name="password" placeholder="Пароль" class="form-input">
+
                                 <button type="submit" class="btn form-btn">Sign IN</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </section>
         <!-- END  content-info -->
 

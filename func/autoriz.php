@@ -45,7 +45,7 @@ background-repeat: no-repeat;">
         }
 
         .validation {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 600;
         }
 
@@ -56,7 +56,7 @@ background-repeat: no-repeat;">
             background-color: white;
             color: black;
             font-size: 25px;
-            padding-bottom: 25px;
+            padding: 25px 0;
             text-align: center;
             font-weight: 900;
             margin-top: 250px;
@@ -66,7 +66,7 @@ background-repeat: no-repeat;">
 
     <?php
     require_once "./config.php";
-    $email = $_POST['email'];
+    $email = $_POST['mail'];
     $password = $_POST['password'];
 
     ?>
@@ -84,7 +84,7 @@ background-repeat: no-repeat;">
                 <div class="validation">
                     <?php
                     // Подготавливаем SQL-запрос
-                    $sql = "SELECT * FROM users WHERE email = ?";
+                    $sql = "SELECT * FROM users WHERE mail = ?";
                     $stmt = $conn->prepare($sql);
                     $stmt->bind_param('s', $email);
                     $stmt->execute();
@@ -95,11 +95,10 @@ background-repeat: no-repeat;">
                     // Проверяем, найден ли пользователь и верен ли пароль
                     if ($user && password_verify($password, $user['password'])) {
                         $_SESSION['auth'] = true;
-                        $_SESSION['username'] = $user['user_name'];
-                        $_SESSION['lastname'] = $user['last_name'];  // Сохраняем имя пользователя в сессии
-                        echo "Вы вошли как: " . $_SESSION['username'] . " " . $_SESSION['lastname'] . " | ";  // Выводим пользователя
+                        $_SESSION['username'] = $user['first_name'];
+                        echo "Вы вошли как: " . $_SESSION['username'];  // Выводим пользователя
                     } else {
-                        echo "Авторизация не удалась <br> <a href='index.php'>Вернуться на начало</a> <br>";
+                        // echo "Авторизация не удалась <br> <a href='index.php'>Вернуться на начало</a> <br>";
                     }
                     ?>
                     <a href="/" class="logaut">Выйти</a>
@@ -133,11 +132,12 @@ background-repeat: no-repeat;">
 
         // проверяем авторизован если да показываем дату
         if (!empty($_SESSION['auth'])) {
-            require_once './content.html';
-        } else {
-            echo "<br>!Пользователь не авторизован!!!" . "<br>";
             $month = date('n') - 1;
+            echo "Привет " . "  " . $_SESSION['username'] . "<br>" . "Сегодня" . "<br>";
             echo $arr[$month] . ' ' . date('d, Y');
+        } else {
+            echo "Авторизация не удалась" . "<br>";
+            echo "<a href='/'>Пробуй снова</a> <br>";
         }
         ?>
     </div>

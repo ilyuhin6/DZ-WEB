@@ -93,22 +93,19 @@
         }
     </style>
     <?php
-    require_once ".config.php";
+    require_once "./config.php";
     // Собираем данные с формы и сохраняем их в переменные
-    $name_user = mb_convert_case($_POST['user-name'], MB_CASE_TITLE);  // Переводим в верхний регистр имя
-    $last_name = mb_convert_case($_POST['last-name'], MB_CASE_TITLE);  // Переводим в верхний регистр фамилию
-    // $date_user = $_POST['date-user'];
-    // $country_user = $_POST['country-user'];
-    $email = $_POST['email'];
+    $name_user = mb_convert_case($_POST['name'], MB_CASE_TITLE);  // Переводим в верхний регистр имяя
+    $email = $_POST['mail'];
     $password = $_POST['password'];
     $password_true = $_POST['password-true'];
-
     // хешурием пароль
     $cripto_passw = password_hash($password, PASSWORD_DEFAULT);
+    // ---------------------------------------------
 
     // Создаем два массива и переменую для вывода успешной регистрации 
-    $arr_user = [$name_user, $last_name, $email, $password];
-    $labels = ['Имя', 'Фамилия', 'Email', 'Пароль'];
+    $arr_user = [$name_user, $email, $password];
+    $labels = ['Имя', 'mail', 'Пароль'];
     $msg = "Регистрация Успешна!<br> Сохраните Ваши данные<br><br>";
 
     ?>
@@ -138,10 +135,10 @@
             die;
         }
         // Готовим sql запрос
-        $sql = "INSERT INTO users (user_name, last_name, email, password) 
-                VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO userS (first_name,  mail, password) 
+                VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $name_user, $last_name, $email, $cripto_passw);
+        $stmt->bind_param("sss", $name_user,  $email, $cripto_passw);
         // проверка прошел ли запрос
         if ($stmt->execute()) {
             echo  $msg;
