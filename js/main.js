@@ -159,3 +159,8 @@ ceButton.addEventListener('click', () => {
     display.value = '';
     display.placeholder = '_'; // Если вы хотите очистить текст-заполнитель
   });
+
+
+
+  
+

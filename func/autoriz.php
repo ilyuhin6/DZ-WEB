@@ -112,6 +112,28 @@ background-repeat: no-repeat;">
             margin-top: 50px;
             border-radius: 10px;
         }
+
+        .footer-admin {
+            position: relative;
+            bottom: -550px;
+            height: 100px;
+            background-color: #242582;
+            font-weight: 900;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #fff;
+            padding: 25px;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .click-cat {
+            position: relative;
+            left: 1200px;
+            top: 300px;
+        }
     </style>
 
     <?php
@@ -196,9 +218,22 @@ background-repeat: no-repeat;">
     require_once "../admin-panel.html";
     ?>
 
+    <div class="click-cat">
+        <img src="../img/cat.gif" alt="">
+    </div>
 
+    <script>
+        // мяукаем кошаком start
+        const navbar = document.querySelector('.click-cat');
+        if (navbar) { // Проверка, что элемент найден
+            navbar.addEventListener('click', () => {
+                alert('Мяу');
+            });
+        }
+    </script>
 
     <script src="https://kit.fontawesome.com/cef99322ba.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
