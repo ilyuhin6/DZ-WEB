@@ -7,7 +7,7 @@
     <title>Панель управления</title>
 </head>
 
-<body style="background-image: url(../img/kat.gif); background-size: cover;
+<body style="background-image: url(../img/fon.jpg); background-size: cover;
 background-repeat: no-repeat;">
     <style>
         * {
@@ -18,6 +18,7 @@ background-repeat: no-repeat;">
         body {
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
         h1,
@@ -27,15 +28,44 @@ background-repeat: no-repeat;">
             padding: 0;
         }
 
+        .sitebar {
+            position: absolute;
+            background-color: #242582;
+            max-width: 300px;
+            left: 0;
+            top: 100px;
+            border-radius: 10px;
+        }
+
+        .sitebar-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 30px;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .sitebar-nav-link {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 20px;
+            color: gray;
+        }
+
+
+
+        .sitebar-icon {
+            color: #000;
+            margin-right: 15px;
+        }
+
         a {
             color: orange;
             text-decoration: none;
         }
 
-        a::before {
-            content: "|";
-            padding-left: 5px;
-        }
+
 
         .header-admin-box-title {
             display: flex;
@@ -60,6 +90,10 @@ background-repeat: no-repeat;">
             flex-wrap: wrap;
         }
 
+        .header-admin-title {
+            color: #000;
+        }
+
         .validation {
             font-size: 20px;
             font-weight: 600;
@@ -75,7 +109,7 @@ background-repeat: no-repeat;">
             padding: 25px 0;
             text-align: center;
             font-weight: 900;
-            margin-top: 250px;
+            margin-top: 50px;
             border-radius: 10px;
         }
     </style>
@@ -154,9 +188,14 @@ background-repeat: no-repeat;">
         } else {
             echo "Авторизация не удалась" . "<br>";
             echo "<a href='/'>Пробуй снова</a> <br>";
+            die;
         }
         ?>
     </div>
+    <?php
+    require_once "../admin-panel.html";
+    ?>
+
 
 
     <script src="https://kit.fontawesome.com/cef99322ba.js" crossorigin="anonymous"></script>

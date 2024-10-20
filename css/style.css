@@ -707,4 +707,18 @@ h2 {
   flex-direction: column;
   justify-content: center;
   padding: 25px 50px;
+  list-style: none;
+  gap: 10px;
+}
+
+.sitebar-nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.sitebar-icon {
+  color: #000;
+  margin-right: 15px;
 }
