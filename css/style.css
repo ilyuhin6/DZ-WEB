@@ -692,18 +692,19 @@ h2 {
 
 /* END CALC */
 
-/* ++++++++++++++++++++++--Admin panel--++++++++++++++++++++ */
-.admin-panel-box {
+/* ++++++++++++++++++++++--START Admin panel--++++++++++++++++++++ */
+.sitebar {
   position: relative;
+  background-color: #242582;
+  max-width: 300px;
+  height: 100vh;
+  right: 0;
+  top: 50px;
 }
 
-.admin-panel {
-  background-image: url(../img/kat.gif);
-  position: absolute;
-  width: 800px;
-  height: 900px;
-  top: 0;
-  bottom: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
+.sitebar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 50px;
 }

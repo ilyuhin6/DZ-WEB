@@ -15,11 +15,26 @@ background-repeat: no-repeat;">
             font-family: monospace;
         }
 
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         h1,
         p,
         a {
             margin: 0;
             padding: 0;
+        }
+
+        a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        a::before {
+            content: "|";
+            padding-left: 5px;
         }
 
         .header-admin-box-title {
@@ -29,7 +44,7 @@ background-repeat: no-repeat;">
         }
 
         .header {
-            background-color: gray;
+            background-color: #242582;
             padding: 20px 0;
         }
 
